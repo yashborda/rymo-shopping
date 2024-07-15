@@ -1,0 +1,45 @@
+.ProductDetails {
+    
+    #main_img{
+        object-fit: cover;
+        max-height: 450px;
+    }
+
+    .small-img-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .small-img-col {
+        flex-basis: 23%;
+        cursor: pointer;
+        img{
+            width: 100%;
+            max-height: 130px;
+        }
+    }
+
+    h6{
+        text-transform: capitalize;
+    }
+
+    select{
+        display: block;
+        padding: 5px 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input{
+        width: 50px;
+        height: 45px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+        &:focus{
+            outline: none;
+        }
+    }
+    
+}

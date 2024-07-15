@@ -1,0 +1,129 @@
+@import '../abstracts/variables';
+
+nav {
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    .navbar-toggler {
+        border: 0;
+
+        &:focus,
+        &:active {
+            outline: none;
+            box-shadow: none;
+            border: 0;
+        }
+
+        .navbar-toggler-icon {
+            width: 20px;
+            height: 3px;
+            background: #232340;
+            display: block;
+            background-image: none;
+            transition: .5s ease-in-out;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border: 0;
+            }
+        }
+
+        .top-bar {
+            margin-top: 5px;
+            transform: rotate(135deg);
+        }
+
+        .bottom-bar {
+            margin-top: -3px;
+            transform: rotate(-135deg);
+        }
+    }
+
+    .navbar-toggler {
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    .collapsed {
+        .top-bar {
+            margin-top: 0px;
+            transform: rotate(0deg);
+        }
+
+        .bottom-bar {
+            margin-top: 5px;
+            transform: rotate(0deg);
+        }
+    }
+
+    .navbar-nav {
+        gap: 40px;
+
+        .nav-link {
+            color: #000;
+            transition: 0.3s ease;
+
+            &:hover,
+            &:active,
+            &.active {
+                color: $color;
+                span{
+                    background-color: #2a2a2a;
+                }
+            }
+        }
+
+        .fa-shopping-cart {
+            font-size: 25px;
+            padding: 0 7px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s ease;
+
+            &:hover,
+            &:active {
+                color: $color;
+            }
+        }
+
+        span {
+            position: absolute;
+            background-color: coral;
+            color: #fff;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 50%;
+            margin-left: -5px;
+            top: -5px;
+            transition: 0.3s ease;
+        }
+
+        .dropdown{
+            .dropdown-toggle {
+                background-color: coral !important;
+                min-width: 160px;
+
+                .userPhoto {
+                    width: 30px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .dropdown-menu {
+                border:1px solid #000 !important;
+                border-radius: 0%;
+                li a{
+                    &:hover {
+                        background-color: coral !important;
+                    }
+                }
+            }
+        }
+    }
+}

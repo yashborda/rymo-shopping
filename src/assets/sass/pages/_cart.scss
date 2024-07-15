@@ -1,0 +1,131 @@
+#cart {
+    .hr {
+        width: 50px;
+        border-top: 2px solid coral;
+        margin: 10px;
+        margin-left: 0px;
+    }
+
+    #cart-container {
+
+        table {
+            border-collapse: collapse;
+            table-layout: auto;
+            width: 100%;
+            min-width: 700px;
+
+            td {
+                border: 1px solid #b6b3b3;
+                text-align: center;
+                padding: 10px;
+            }
+
+            td:nth-child(1) {
+                width: 100px;
+            }
+
+            td:nth-child(2),
+            td:nth-child(3) {
+                width: 200px;
+            }
+
+            td:nth-child(4),
+            td:nth-child(5),
+            td:nth-child(6) {
+                width: 170px;
+            }
+
+            thead {
+                font-weight: 700;
+
+                td {
+                    background-color: #fd8c66;
+                    color: #fff;
+                    border: none;
+                    padding: 6px 0px;
+                    text-transform: uppercase;
+                }
+            }
+
+            tbody {
+                td {
+                    i {
+                        color: #8d8c89;
+                        cursor: pointer;
+                        padding: 3px;
+                        border-bottom: 1px solid transparent;
+
+                        &:hover {
+                            border-bottom: 1px solid #8d8c89;
+                        }
+                    }
+
+                    img {
+                        width: 110px;
+                        height: 70px;
+                        object-fit: cover;
+                    }
+
+                    input {
+                        padding: 3px 5px;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #card-bottom .coupon>div,
+    #card-bottom .total>div {
+        border: 1px solid #b6b3b3;
+    }
+
+    #card-bottom .coupon {
+        h5 {
+            background-color: #fd8c66;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            font-weight: 700;
+        }
+
+        p,
+        input {
+            padding: 10px 12px;
+        }
+
+        input {
+            margin: 0 10px 20px 12px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    #card-bottom .total {
+        h5 {
+            background-color: #fd8c66;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            font-weight: 700;
+        }
+
+        h6,
+        p {
+            color: #2a2a2a;
+            padding: 2px 10px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    #cart-container {
+        overflow-x: scroll;
+    }
+}

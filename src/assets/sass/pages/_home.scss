@@ -1,0 +1,22 @@
+#home {
+    background-image: url('../img/back.jpg');
+    width: 100%;
+    height: 100vh;
+    max-height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    // background-position-x: -550px;
+
+    span {
+        color: coral;
+    }    
+
+    a{
+        @include button(#1d1d1d,aliceblue,#3a3833,aliceblue)
+    }
+}
+
