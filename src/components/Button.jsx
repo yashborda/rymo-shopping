@@ -1,8 +1,8 @@
 import React from "react";
 
-const Button = ({ buttonText, btnLoader }) => {
+const Button = ({ buttonText, buttonClass, btnLoader }) => {
   return (
-    <button className={`mb-3 ${btnLoader ? "disabled" : ""}`}>
+    <button className={`mb-3 ${btnLoader ? "disabled" : ""} ${buttonClass}`}>
       {!btnLoader ? (
         buttonText
       ) : (

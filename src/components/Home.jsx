@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Product from "./Product";
+import Footer from "../layout/Footer";
 import { Link } from "react-router-dom";
 import brand1 from "../assets/img/brand/1.png";
 import brand2 from "../assets/img/brand/2.png";
@@ -124,6 +125,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };
