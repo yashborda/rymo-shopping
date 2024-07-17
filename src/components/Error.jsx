@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Error = () => {
   return (
-    <div className="container">
-      <Link to="/" className="nav-link " aria-current="page">
+    <div className="container error-box">
+      <NavLink to="/" className="nav-link " aria-current="page">
         Shoping - Cart
-      </Link>
+      </NavLink>
       <br />
       <h1>404 Error 😔</h1>
     </div>

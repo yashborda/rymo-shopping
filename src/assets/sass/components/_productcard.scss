@@ -4,12 +4,26 @@
 
   img {
     transition: 0.3s ease;
-    max-width: 220;
-    max-height: 246px;
+    // max-width: 220px;
+    height: 350px;
+    object-fit: cover;
   }
 
-  &:hover img {
-    opacity: 0.7;
+  .btn-group {
+    transform: translateY(30px);
+    transition: transform 0.3s, opacity 0.3s, background 0.3s;
+    opacity: 0;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.7;
+    }
+
+    .btn-group {
+      transform: translateY(10px);
+      opacity: 1;
+    }
   }
 
   .star {

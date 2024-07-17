@@ -109,7 +109,7 @@ nav .collapsed .bottom-bar {
 }
 
 nav .navbar-nav {
-  gap: 40px;
+  gap: 35px;
 }
 
 nav .navbar-nav .nav-link {
@@ -325,13 +325,13 @@ footer .copyright a {
   color: coral;
 }
 
-#new .one .details button {
+#new .one .details .btn-2 {
   font-size: 14px;
   font-weight: 500;
   display: inline-block;
   outline: none;
   border: none;
-  border-bottom: 1px solid coral;
+  border-bottom: 1px solid coral !important;
   background: none;
   color: coral;
   padding: 2.5px;
@@ -339,11 +339,12 @@ footer .copyright a {
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  text-decoration: none;
 }
 
-#new .one .details button:hover {
+#new .one .details .btn-2:hover {
   color: #fff;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff !important;
 }
 
 #new .one:hover .details {
@@ -355,7 +356,7 @@ footer .copyright a {
 
 #new .one:hover .btn-2 {
   color: #2a2a2a;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2a2a2a !important;
 }
 
 #featured hr,
@@ -749,6 +750,39 @@ footer .copyright a {
   }
 }
 
+.error-box {
+  width: 100%;
+  height: 100vh;
+  max-height: 525px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.error-box .nav-link {
+  display: block;
+  color: coral;
+  font-size: 25px;
+  font-weight: 500;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.error-box .nav-link:hover {
+  color: coral;
+  text-decoration: underline;
+}
+
 button {
   font-size: 14px;
   font-weight: 700;
@@ -762,6 +796,7 @@ button {
   transition: 0.3s ease;
   background-color: #1d1d1d;
   color: aliceblue;
+  text-decoration: none;
 }
 
 button:hover {
@@ -774,6 +809,7 @@ button:hover {
   background-color: #fb774b;
   color: aliceblue;
   opacity: 1;
+  text-decoration: none;
 }
 
 .button_1:hover {
@@ -788,12 +824,29 @@ button:hover {
 .product img {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  max-width: 220;
-  max-height: 246px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product .btn-group {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: opacity 0.3s, background 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, background 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s, background 0.3s;
+  transition: transform 0.3s, opacity 0.3s, background 0.3s, -webkit-transform 0.3s;
+  opacity: 0;
 }
 
 .product:hover img {
   opacity: 0.7;
+}
+
+.product:hover .btn-group {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 1;
 }
 
 .product .star svg {

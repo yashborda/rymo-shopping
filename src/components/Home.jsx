@@ -1,23 +1,55 @@
-import React, { useState } from "react";
-import Product from "./Product";
-import data from "../database/data";
-import Footer from "../layout/Footer";
+import React from "react";
 import { NavLink } from "react-router-dom";
+import ProductSection from "./ProductSection";
 import brand1 from "../assets/img/brand/1.png";
 import brand2 from "../assets/img/brand/2.png";
 import brand3 from "../assets/img/brand/3.png";
 import brand4 from "../assets/img/brand/4.png";
 import brand5 from "../assets/img/brand/5.png";
 import brand6 from "../assets/img/brand/6.png";
-import new1 from "../assets/img/new/1.jpg";
-import new2 from "../assets/img/new/5.jpg";
-import new3 from "../assets/img/new/3.jpg";
-// import featured1 from "../assets/img/featured/1.jpg";
-// import featured2 from "../assets/img/featured/2.jpg";
+
+const cardData = [
+  {
+    title: "Extreme Rare Sneakers",
+    button: "Shop Now",
+    image: 1,
+  },
+  {
+    title: "Awesome Blank Outfit",
+    button: "Shop Now",
+    image: 5,
+  },
+  {
+    title: "Wristwatches Up To 50% Off",
+    button: "Shop Now",
+    image: 3,
+  },
+];
+
+const OneCard = ({ cardData }) => {
+  return (
+    <>
+      {cardData.map((data) => (
+        <div className="one col-lg-4 p-0">
+          <img
+            className="img-fluid"
+            src={require(`../assets/img/new/${data.image}.jpg`)}
+            alt={data.image}
+          />
+          <div className="details">
+            <h2>{data.title}</h2>
+            <NavLink className="btn-2" to="/shop">
+              {data.button}
+            </NavLink>
+          </div>
+        </div>
+      ))}
+    </>
+  );
+};
 
 const Home = () => {
   const brands = [brand1, brand2, brand3, brand4, brand5, brand6];
-  const [productList, setProductList] = useState(data.filter((product) => product.category === "featured"));
 
   return (
     <>
@@ -50,48 +82,45 @@ const Home = () => {
       </section>
 
       <section id="new" className="container">
-        <div className="row">
-          <div className="one col-lg-4 p-0">
-            <img className="img-fluid" src={new1} alt="new1" />
-            <div className="details">
-              <h2>Product Name Title</h2>
-              <button className="btn-2">shop now</button>
-            </div>
-          </div>
-          <div className="one col-lg-4 p-0">
-            <img className="img-fluid" src={new2} alt="new2" />
-            <div className="details">
-              <h2>Product Name Title</h2>
-              <button className="btn-2">shop now</button>
-            </div>
-          </div>
-          <div className="one col-lg-4 p-0">
-            <img className="img-fluid" src={new3} alt="new3" />
-            <div className="details">
-              <h2>Product Name Title</h2>
-              <button className="btn-2">shop now</button>
-            </div>
-          </div>
+        <div className="row">{<OneCard cardData={cardData} />}</div>
+      </section>
+
+      <ProductSection
+        category="featured"
+        sectionId="featured"
+        title="Our Featured"
+        description="Here you can check out our new products with fair price on rymo."
+      />
+
+      <section id="banner" className="my-5 py-5">
+        <div class="container">
+          <h4>MID SEASON'S SALE</h4>
+          <h1 className="pb-sm-3 pb-md-5">
+            Autumn collection <br /> UP TO 20% OFF
+          </h1>
+          <NavLink
+            to="/shop"
+            className="btn-4 text-decoration-none"
+            aria-current="page"
+          >
+            Shop Now
+          </NavLink>
         </div>
       </section>
 
-      <section id="featured">
-        <div className="container text-center mt-5 pt-5">
-          <h3>Our Featured</h3>
-          <hr />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div className="row mx-auto content-fluid">
-            {
-              <Product
-                cardClass="col-lg-3 col-md-6"
-                productList={productList}
-              />
-            }
-          </div>
-        </div>
-      </section>
+      <ProductSection
+        category="watch"
+        sectionId="clothes"
+        title="Best Men's Watches"
+        description="Here you will find the best men's watches at a fair price."
+      />
 
-      <Footer />
+      <ProductSection
+        category="shoes"
+        sectionId="clothes"
+        title="Men's Shoes"
+        description="Here at Rymo you will find men's shoes of various types at a fair price."
+      />
     </>
   );
 };

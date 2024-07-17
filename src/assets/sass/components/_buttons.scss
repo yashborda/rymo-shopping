@@ -10,6 +10,7 @@ button {
     transition: 0.3s ease;
     background-color: #1d1d1d;
     color: aliceblue;
+    text-decoration: none;
 
     &:hover {
         background-color: #3a3833;
@@ -21,6 +22,7 @@ button {
     background-color: #fb774b;
     color: aliceblue;
     opacity: 1;
+    text-decoration: none;
 
     &:hover {
         background-color: rgba(251, 119, 75, 0.9) !important;
