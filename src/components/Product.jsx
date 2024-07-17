@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const Product = ({ cardClass, productList }) => {
   return (
     <>
@@ -9,7 +8,7 @@ const Product = ({ cardClass, productList }) => {
           <div key={data.id} className={`product text-center ${cardClass}`}>
             <img
               className="img-fluid mb-md-3"
-              src={data.Product_main_image}
+              src={require(`../assets/img/${data.Product_main_image}.jpg`)}
               alt={data.Product_main_image}
             />
             <div className="star py-3">

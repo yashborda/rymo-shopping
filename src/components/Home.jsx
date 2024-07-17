@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Product from "./Product";
+import data from "../database/data";
 import Footer from "../layout/Footer";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import brand1 from "../assets/img/brand/1.png";
 import brand2 from "../assets/img/brand/2.png";
 import brand3 from "../assets/img/brand/3.png";
@@ -11,48 +12,12 @@ import brand6 from "../assets/img/brand/6.png";
 import new1 from "../assets/img/new/1.jpg";
 import new2 from "../assets/img/new/5.jpg";
 import new3 from "../assets/img/new/3.jpg";
-import featured1 from "../assets/img/featured/1.jpg";
-import featured2 from "../assets/img/featured/2.jpg";
+// import featured1 from "../assets/img/featured/1.jpg";
+// import featured2 from "../assets/img/featured/2.jpg";
 
 const Home = () => {
   const brands = [brand1, brand2, brand3, brand4, brand5, brand6];
-  const [productList, setProductList] = useState([
-    {
-      id: 1,
-      Product_main_image: featured1,
-      Product_name: "Shoes",
-      Product_price: 30,
-      category: "featured",
-    },
-    {
-      id: 2,
-      Product_main_image: featured2,
-      Product_name: "Clothes",
-      Product_price: 70,
-      category: "featured",
-    },
-    {
-      id: 3,
-      Product_main_image: featured1,
-      Product_name: "Shoes",
-      Product_price: 30,
-      category: "featured",
-    },
-    {
-      id: 4,
-      Product_main_image: featured2,
-      Product_name: "Clothes",
-      Product_price: 70,
-      category: "featured",
-    },
-  ]);
-  const productStore = [];
-
-  // useEffect(() => {
-  //   setProductList(
-  //     productStore.data.filter((product) => product.category === "featured")
-  //   );
-  // }, [productStore.data]);
+  const [productList, setProductList] = useState(data.filter((product) => product.category === "featured"));
 
   return (
     <>
@@ -66,9 +31,9 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing
             <br /> elit. Magnam minus totam
           </p>
-          <Link to="/shop" className="btn-1 text-decoration-none">
+          <NavLink to="/shop" className="btn-1 text-decoration-none">
             Shop Now
-          </Link>
+          </NavLink>
         </div>
       </section>
 

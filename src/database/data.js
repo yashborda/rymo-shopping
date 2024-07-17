@@ -364,3 +364,5 @@ const data = [
     total: "25",
   },
 ];
+
+module.exports = data;
