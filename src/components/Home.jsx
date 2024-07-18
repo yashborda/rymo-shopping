@@ -30,7 +30,7 @@ const OneCard = ({ cardData }) => {
   return (
     <>
       {cardData.map((data) => (
-        <div className="one col-lg-4 p-0">
+        <div className="one col-lg-4 p-0" key={data.title}>
           <img
             className="img-fluid"
             src={require(`../assets/img/new/${data.image}.jpg`)}
@@ -73,6 +73,7 @@ const Home = () => {
         <div className="row m-0 py-5">
           {brands.map((brand, index) => (
             <img
+              key={index}
               className="img-fluid col-6 col-md-4 col-lg-2"
               src={brand}
               alt={`brand.${index}`}
@@ -93,7 +94,7 @@ const Home = () => {
       />
 
       <section id="banner" className="my-5 py-5">
-        <div class="container">
+        <div className="container">
           <h4>MID SEASON'S SALE</h4>
           <h1 className="pb-sm-3 pb-md-5">
             Autumn collection <br /> UP TO 20% OFF

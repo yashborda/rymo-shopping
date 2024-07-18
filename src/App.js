@@ -8,6 +8,8 @@ import Shop from "./components/Shop";
 import Blog from "./components/Blog";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ProductDetails from "./components/ProductDetails";
+import Cart from "./components/Cart";
 import Error from "./components/Error";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/ProductDetails/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<Error />} />
         </Routes>

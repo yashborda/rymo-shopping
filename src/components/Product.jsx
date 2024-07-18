@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Product = ({ cardClass, productList }) => {
   return (
@@ -21,10 +22,9 @@ const Product = ({ cardClass, productList }) => {
           <h4 className="p-name">{data.Product_name}</h4>
           <h4 className="p-price fw-normal">${data.Product_price}</h4>
           <div className="d-flex justify-content-center gap-2 btn-group">
-            <Button
-              buttonClass="button_1"
-              buttonText="Details"
-            />
+            <NavLink to={`/ProductDetails/${data.id}`}>
+              <Button buttonClass="button_1" buttonText="Details" />
+            </NavLink>
             <Button buttonText="Buy Now" />
           </div>
         </div>

@@ -106,7 +106,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-4 text-lg-center copyright">
               <NavLink to="https://www.linkedin.com/in/yash-borda/">
-                <FontAwesomeIcon icon={["fab", "fa-linkedin"]} />
+                <FontAwesomeIcon icon={["fab", "fa-linkedin-in"]} />
               </NavLink>
               <NavLink to="https://github.com/yashborda7048">
                 <FontAwesomeIcon icon={["fab", "fa-github"]} />
