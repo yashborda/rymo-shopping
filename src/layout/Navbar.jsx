@@ -10,7 +10,7 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <>
-      {!["/login", "/register"].includes(location.pathname) && (
+      {!["/login", "/register", "/signup"].includes(location.pathname) && (
         <nav className="navbar navbar-expand-lg fixed-top bg-light py-3">
           <div className="container">
             <NavLink to="/" className="navbar-brand" aria-current="page">

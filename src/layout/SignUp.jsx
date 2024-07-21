@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Login() {
+function SignUp() {
   const {
     register,
     handleSubmit,
@@ -22,13 +22,27 @@ function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
 
   return (
-    <section id="login">
+    <section id="signup">
       <div className="container">
         <NavLink to="/">
           <img src={require("../assets/img/logo3.png")} alt="logo" />
         </NavLink>
-        <h1>Login</h1>
+        <h1>Sign Up</h1>
         <form onSubmit={handleSubmit(loginForm)}>
+          <label htmlFor="userName">
+            User Name <span className="input-errors d-inline">*</span>
+          </label>
+          <input
+            type="text"
+            {...register("userName", { required: "User Name is required" })}
+            placeholder="User Name"
+          />
+          {errors.userName && (
+            <div className="input-errors">
+              <div className="error-msg">{errors.userName.message}</div>
+            </div>
+          )}
+
           <label htmlFor="email">
             E-Mail <span className="input-errors d-inline">*</span>
           </label>
@@ -36,6 +50,10 @@ function Login() {
             type="email"
             {...register("email", {
               required: "Email is required",
+              pattern: {
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                message: "Invalid email address",
+              },
             })}
             placeholder="Email Address"
           />
@@ -53,6 +71,16 @@ function Login() {
               type={passwordShown ? "text" : "password"}
               {...register("password", {
                 required: "Password is required",
+                minLength: {
+                  value: 8,
+                  message: "Password must be at least 8 characters.",
+                },
+                pattern: {
+                  value:
+                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                  message:
+                    "Password must include at least one uppercase letter, one lowercase letter, one number, and one special character",
+                },
               })}
               placeholder="Password"
             />
@@ -81,17 +109,16 @@ function Login() {
           >
             Forgot password
           </NavLink>
-          <button type="submit">Login</button>
+          <button type="submit">Sign Up</button>
         </form>
 
-        <button className="button_1">Login With Phone Number</button>
 
-        <NavLink to="/signup" className="link">
-          <h4>Sign Up</h4>
+        <NavLink to="/login" className="link">
+          <h4>Login</h4>
         </NavLink>
       </div>
     </section>
   );
 }
 
-export default Login;
+export default SignUp;
