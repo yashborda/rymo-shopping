@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Product from "./Product";
 import data from "../database/data";
+import { fetchData } from "../firebase";
 
 const ProductSection = ({ category, title, sectionId, description }) => {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    const filteredProducts = category
-      ? data.filter((product) => product.category === category)
-      : data;
-    setProductList(filteredProducts);
+    fetchData((fdata) => {
+      if (fdata && category === "shop") {
+        setProductList(
+          fdata.filter((product) => product.category === category)
+        );
+      } else {
+        setProductList(data.filter((product) => product.category === category));
+      }
+    });
   }, [category]);
 
   return (

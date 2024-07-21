@@ -4,10 +4,12 @@ import logo from "../assets/img/logo1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
-  const user = "";
+  const user = "yash";
   const photo = "";
   const count_length = 2;
   const location = useLocation();
+
+  const isUserLoggedIn = user !== "";
   return (
     <>
       {!["/login", "/register", "/signup"].includes(location.pathname) && (
@@ -64,7 +66,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to="/cart"
+                    to={isUserLoggedIn ? "/cart" : "/login"}
                     className="nav-link p-0 position-relative"
                     aria-current="page"
                   >
@@ -79,18 +81,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  {user === "" ? (
-                    <NavLink
-                      to="/login"
-                      className="nav-link"
-                      aria-current="page"
-                    >
-                      <button className="button_1 px-3" type="button">
-                        <FontAwesomeIcon className="me-2" icon="fa fa-user" />
-                        Login
-                      </button>
-                    </NavLink>
-                  ) : (
+                  {isUserLoggedIn ? (
                     <div className="dropdown">
                       <button
                         className="btn button_1 dropdown-toggle d-flex justify-content-between align-items-center"
@@ -125,6 +116,17 @@ const Navbar = () => {
                         </li>
                       </ul>
                     </div>
+                  ) : (
+                    <NavLink
+                      to="/login"
+                      className="nav-link"
+                      aria-current="page"
+                    >
+                      <button className="button_1 px-3" type="button">
+                        <FontAwesomeIcon className="me-2" icon="fa fa-user" />
+                        Login
+                      </button>
+                    </NavLink>
                   )}
                 </li>
               </ul>
