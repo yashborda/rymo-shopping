@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Product from "./Product";
-import data from "../database/data";
+// import data from "../database/data";
 import { fetchData } from "../firebase";
 
 const ProductSection = ({ category, title, sectionId, description }) => {
@@ -8,12 +8,12 @@ const ProductSection = ({ category, title, sectionId, description }) => {
 
   useEffect(() => {
     fetchData((fdata) => {
-      if (fdata && category === "shop") {
+      if (fdata && category !== "shop") {
         setProductList(
           fdata.filter((product) => product.category === category)
         );
       } else {
-        setProductList(data.filter((product) => product.category === category));
+        setProductList(fdata);
       }
     });
   }, [category]);
