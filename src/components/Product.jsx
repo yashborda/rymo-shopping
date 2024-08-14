@@ -2,7 +2,12 @@ import React from "react";
 import Button from "./Button";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Product = ({ cardClass, productList }) => {
+  const addCart = (id) => {
+    console.log(id);
+  };
+
   return (
     <>
       {productList.map((data) => (
@@ -25,7 +30,11 @@ const Product = ({ cardClass, productList }) => {
             <NavLink to={`/productDetails/${data.id}`}>
               <Button buttonClass="button_1" buttonText="Details" />
             </NavLink>
-            <Button buttonText="Buy Now" />
+            <Button
+              type="button"
+              clickFun={() => addCart(data.id)}
+              buttonText="Buy Now"
+            />
           </div>
         </div>
       ))}

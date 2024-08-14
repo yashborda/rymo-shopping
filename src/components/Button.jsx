@@ -1,10 +1,10 @@
 import React from "react";
 
-const Button = ({ buttonText, buttonClass, btnLoader }) => {
+const Button = (props) => {
   return (
-    <button className={`mb-3 ${btnLoader ? "disabled" : ""} ${buttonClass}`}>
-      {!btnLoader ? (
-        buttonText
+    <button onClick={props.clickFun} className={`mb-3 ${props.btnLoader ? "disabled" : ""} ${props.buttonClass}`}>
+      {!props.btnLoader ? (
+        props.buttonText
       ) : (
         <>
           <span
@@ -12,7 +12,7 @@ const Button = ({ buttonText, buttonClass, btnLoader }) => {
             role="status"
             aria-hidden="true"
           ></span>
-          {buttonText}
+          {props.buttonText}
         </>
       )}
     </button>

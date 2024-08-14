@@ -4,14 +4,14 @@ import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
 import Login from "./layout/Login";
 import SignUp from "./layout/SignUp";
-import Home from "./components/Home";
-import Shop from "./components/Shop";
-import Blog from "./components/Blog";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import Blog from "./pages/Blog";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import ProductDetails from "./components/ProductDetails";
-import Cart from "./components/Cart";
-import Error from "./components/Error";
+import Cart from "./pages/Cart";
+import Error from "./pages/Error";
 
 function App() {
   return (

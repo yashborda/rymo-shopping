@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ProductSection from "./ProductSection";
+import ProductSection from "../components/ProductSection";
 import brand1 from "../assets/img/brand/1.png";
 import brand2 from "../assets/img/brand/2.png";
 import brand3 from "../assets/img/brand/3.png";
