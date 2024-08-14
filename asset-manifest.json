@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/rymo-shopping/static/css/main.7cfdc80a.css",
+    "main.js": "/rymo-shopping/static/js/main.8d4a56ce.js",
+    "static/media/2.jpg": "/rymo-shopping/static/media/2.9f7be09e605e2f9b8169.jpg",
+    "static/media/4.jpg": "/rymo-shopping/static/media/4.eebc688b913496a79c14.jpg",
+    "static/media/yash_borda.jpg": "/rymo-shopping/static/media/yash_borda.f2631771a0924763186b.jpg",
+    "static/media/parallax.jpg": "/rymo-shopping/static/media/parallax.0a6d47903aac2bbaa232.jpg",
+    "static/media/1.jpg": "/rymo-shopping/static/media/1.9e9725c0aac31c539672.jpg",
+    "static/media/cart.jpg": "/rymo-shopping/static/media/cart.f5620954baa07976648e.jpg",
+    "static/media/5.jpg": "/rymo-shopping/static/media/5.fd81fd5c66394c97ce9d.jpg",
+    "static/media/21.jpg": "/rymo-shopping/static/media/21.325b8f3e27c3bc1bec4c.jpg",
+    "static/media/back.jpg": "/rymo-shopping/static/media/back.93a4ae126e533b69830f.jpg",
+    "static/media/6.jpg": "/rymo-shopping/static/media/6.4ef4d6b4046e7e1b8a19.jpg",
+    "static/media/17.jpg": "/rymo-shopping/static/media/17.9ee202662c3984d1656c.jpg",
+    "static/media/3.jpg": "/rymo-shopping/static/media/3.6a1d0601ca2ad45b1ff0.jpg",
+    "static/media/22.jpg": "/rymo-shopping/static/media/22.51f2816ffbe6abac21c4.jpg",
+    "static/media/20.jpg": "/rymo-shopping/static/media/20.ba53e09b5d4d2babd0b4.jpg",
+    "static/media/19.jpg": "/rymo-shopping/static/media/19.e5b0b6910ede21f88411.jpg",
+    "static/media/18.jpg": "/rymo-shopping/static/media/18.3765dc0962f2bcf00f47.jpg",
+    "static/media/25.jpg": "/rymo-shopping/static/media/25.fc0de871be7bc95bdc62.jpg",
+    "static/media/26.jpg": "/rymo-shopping/static/media/26.f1e57544cacbbf3ba908.jpg",
+    "static/media/7.jpg": "/rymo-shopping/static/media/7.09756dd5c77794e535ff.jpg",
+    "static/media/24.jpg": "/rymo-shopping/static/media/24.1cac79ebcc378791c590.jpg",
+    "static/media/16.jpg": "/rymo-shopping/static/media/16.94813dfda2ce68fe1bb7.jpg",
+    "static/media/8.jpg": "/rymo-shopping/static/media/8.eca3b4995492b431c630.jpg",
+    "index.html": "/rymo-shopping/index.html",
+    "main.7cfdc80a.css.map": "/rymo-shopping/static/css/main.7cfdc80a.css.map",
+    "main.8d4a56ce.js.map": "/rymo-shopping/static/js/main.8d4a56ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cfdc80a.css",
+    "static/js/main.8d4a56ce.js"
+  ]
+}
